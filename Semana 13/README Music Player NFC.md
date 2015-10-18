@@ -1,0 +1,5 @@
+Esta app cumple con el proposito del Challenge (utiliza NFC); permitiendo, al abrirla, que se abra instantaneamente el reproductor de música de Android.
+El .aia tiene incorporado un segemento de "código" desactivado, el cual permite reproducir una canción determinada por la ruta colocada en el "DataUri".
+De modo que se puede activar la parte desactivada unicamente si se desactiva la que está activada, porque ambas partes trabajan con la misma "ActivityStarter" y si se activan las dos partes al tiempo, sólo funcionará una.
+La parte desactivada se incorporó con el propósito de cumplir que, una vez leído el Tag, una canción se reproduciera inmediatamente; lo cual no se logra al abrir el reproductor de Android.
+Nota: No fue necesaria la incorporación de un mecanismo de escritura porque el Tag se usa en esta aplicación como un desencadenador de "acciones" sin importar el mensaje que lea la app. Así que una vez se inicia la aplicación, comienza a leer el Tag y una vez se ha leído, se abre el reproductor (o se reproduce la canción en el otro caso); desactivándose a consecuencia el modo de lectura del NFC del dispositivo lector de Tags (en este caso el celular).
